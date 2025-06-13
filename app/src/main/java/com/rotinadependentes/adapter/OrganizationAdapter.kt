@@ -10,9 +10,11 @@ import com.rotinadependentes.R
 import com.rotinadependentes.model.Organization
 
 class OrganizationAdapter(
-    private val items: List<Organization>,
+    private var items: List<Organization>,
     private val onItemClick: (Organization) -> Unit
 ) : RecyclerView.Adapter<OrganizationAdapter.ViewHolder>() {
+
+    private var fullList: List<Organization> = ArrayList(items)
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val name: TextView = view.findViewById(R.id.tvOrganizationName)
@@ -23,13 +25,11 @@ class OrganizationAdapter(
             name.text = organization.name
             type.text = organization.type
 
-            // Clique no botão Gerenciar
             btnManage.setOnClickListener {
                 onItemClick(organization)
             }
         }
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -41,8 +41,23 @@ class OrganizationAdapter(
         holder.bind(items[position])
     }
 
+    override fun getItemCount(): Int = items.size
 
+    fun filter(query: String) {
+        items = if (query.isEmpty()) {
+            fullList
+        } else {
+            fullList.filter { organization ->
+                organization.name.contains(query, ignoreCase = true) ||
+                        organization.type.contains(query, ignoreCase = true)
+            }
+        }
+        notifyDataSetChanged()
+    }
 
-    override fun getItemCount() = items.size
+    fun updateList(newList: List<Organization>) {
+        items = newList
+        fullList = ArrayList(newList)
+        notifyDataSetChanged()
+    }
 }
-

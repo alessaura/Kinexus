@@ -1,40 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="16dp">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <EditText
+        android:id="@+id/etTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:hint="Título da rotina"
+        android:layout_marginBottom="12dp" />
 
-        <EditText
-            android:id="@+id/etTitle"
-            android:hint="Título da Rotina"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/etTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Horário (ex: 08:00)"
+        android:layout_marginBottom="16dp" />
 
-        <Button
-            android:id="@+id/btnPickTime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Selecionar Horário"
-            android:layout_marginTop="16dp" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
 
-        <TextView
-            android:id="@+id/tvSelectedTime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nenhum horário selecionado"
-            android:textSize="16sp"
-            android:layout_marginTop="8dp"/>
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar Rotina" />
 
-        <Button
-            android:id="@+id/btnSaveRoutine"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Salvar"
-            android:layout_marginTop="24dp" />
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>
