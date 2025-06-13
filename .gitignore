@@ -1,28 +1,63 @@
-﻿# === ARQUIVOS GRANDES ===
+﻿# =============================================================================
+# KINEXUS - GITIGNORE ROBUSTO
+# =============================================================================
+
+# === ARQUIVOS GRANDES (PRINCIPAL PROBLEMA) ===
+# Heap dumps Java
 *.hprof
 **/*.hprof
 java_pid*
+
+# Core dumps
 core.*
+**/core.*
+
+# Logs grandes
+*.log
+logs/
+**/logs/
 
 # === ANDROID BUILD ===
+# Gradle
 .gradle/
 **/build/
 build/
 app/build/
 
-# === ANDROID STUDIO ===
+# Android Studio
 .idea/
 *.iml
 .DS_Store
+.cxx/
+.externalNativeBuild/
+captures/
+
+# === CONFIGURAÇÕES LOCAIS ===
 local.properties
+**/local.properties
 
 # === ARQUIVOS SENSÍVEIS (OPCIONAIS) ===
+# Descomente se quiser proteger:
 # app/google-services.json
+# google-services.json
+
+# Keystores
 *.keystore
 *.jks
+keystore.properties
+
+# Ambiente
+.env*
+secrets.properties
 
 # === TEMPORÁRIOS ===
-*.log
 *.tmp
 *.bak
-logs/
+*.swp
+*~
+Thumbs.db
+
+# === OUTROS GRANDES ===
+*.zip
+*.rar
+*.tar.gz
