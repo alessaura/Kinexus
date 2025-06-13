@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kinexus</string>
+    <string name="login_title">Gerenciador de Rotina</string>
+    <string name="login_subtitle">Entre para gerenciar rotinas de dependentes</string>
+    <string name="login_with_google">Entrar com Google</string>
+    <string name="login_with_biometric">Entrar com biometria</string>
+    <string name="login_error">Erro ao fazer login. Tente novamente.</string>
+    <string name="login_success">Login realizado com sucesso!</string>
+    <string name="logout">Sair</string>
+    <string name="home_title">Painel Principal</string>
+    <string name="profile">Perfil</string>
+    <string name="settings">Configuracoes</string>
+    <string name="dependents">Dependentes</string>
+    <string name="routines">Rotinas</string>
+    <string name="companies">Empresas</string>
+    <string name="share">Compartilhar</string>
+    <string name="notifications">Notificacoes</string>
+    <string name="biometric_title">Login biometrico</string>
+    <string name="biometric_subtitle">Faca login usando sua biometria</string>
+    <string name="biometric_cancel">Cancelar</string>
+    <string name="biometric_error">Erro de autenticacao biometrica</string>
+    <string name="biometric_success">Autenticacao biometrica bem-sucedida!</string>
+    <string name="biometric_failed">Autenticacao biometrica falhou</string>
+    <string name="biometric_not_available">Biometria nao disponivel neste dispositivo</string>
+    <string name="biometric_not_enrolled">Nenhuma biometria cadastrada no dispositivo</string>
+    <string name="email_required">O e-mail e obrigatorio</string>
+    <string name="password_required">A senha e obrigatoria</string>
+    <string name="remember_me">Lembrar acesso</string>
+    <string name="forgot_password">Esqueci minha senha</string>
+    <string name="sign_up">Cadastre-se</string>
+    <string name="no_account">Nao tem uma conta?</string>
+    <string name="or_login_with_email">ou entre com seu e-mail</string>
+    <string name="email">E-mail</string>
+    <string name="password">Senha</string>
+    <string name="login">Entrar</string>
+    <string name="logout_confirmation_title">Confirmar Logout</string>
+    <string name="logout_confirmation_message">Tem certeza que deseja sair do sistema?</string>
+    <string name="logout_yes">Sim</string>
+    <string name="logout_cancel">Cancelar</string>
+    <string name="logout_content_description">Logout</string>
+    <string name="default_web_client_id">551777312359-99146109a761d9ab3c3ec2.apps.googleusercontent.com</string>
+    <string-array name="relationship_options">
+        <item>Filho(a)</item>
+        <item>Mãe</item>
+        <item>Pai</item>
+        <item>Avó</item>
+        <item>Avô</item>
+        <item>Tia</item>
+        <item>Responsável legal</item>
+        <item>Cuidador(a)</item>
+        <item>Animal de apoio</item>
+    </string-array>
+
+</resources>

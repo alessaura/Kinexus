@@ -1,0 +1,28 @@
+﻿# === ARQUIVOS GRANDES ===
+*.hprof
+**/*.hprof
+java_pid*
+core.*
+
+# === ANDROID BUILD ===
+.gradle/
+**/build/
+build/
+app/build/
+
+# === ANDROID STUDIO ===
+.idea/
+*.iml
+.DS_Store
+local.properties
+
+# === ARQUIVOS SENSÍVEIS (OPCIONAIS) ===
+# app/google-services.json
+*.keystore
+*.jks
+
+# === TEMPORÁRIOS ===
+*.log
+*.tmp
+*.bak
+logs/

@@ -1,0 +1,54 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rotinadependentes">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RotinaDependentes">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.firebase.auth.API_KEY"
+            android:value="@string/google_api_key" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="true" />
+
+        <!-- Entrada principal -->
+        <activity
+            android:name=".ui.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.AdminAuthActivity" android:exported="false" />
+        <activity android:name=".ui.MainActivity" android:exported="false" />
+
+        <!-- Organizações -->
+        <activity android:name=".ui.OrganizationListActivity" android:exported="false" />
+        <activity android:name=".ui.OrganizationCreateActivity" android:exported="false" />
+        <activity android:name=".ui.OrganizationDetailsActivity" android:exported="false" />
+        <activity android:name=".ui.OrganizationEditActivity" android:exported="false" />
+
+        <!-- Membros -->
+        <activity android:name=".ui.MemberListActivity" android:exported="false" />
+        <activity android:name=".ui.member.MemberCreateActivity" android:exported="false" />
+        <activity android:name=".ui.MemberEditActivity" android:exported="false" />
+
+        <!-- Dependente + Rotina -->
+        <activity android:name=".ui.DependentDetailsActivity" android:exported="false" />
+        <activity android:name=".ui.RoutineCreateActivity" android:exported="false" />
+
+    </application>
+</manifest>
